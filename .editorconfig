@@ -1,0 +1,8 @@
+root = true
+
+[*.{diff,md}]
+charset = UTF-8
+end_of_line = LF
+indent_style = TAB
+indent_size = 4
+trim_trailing_whitespace = FALSE

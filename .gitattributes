@@ -1,0 +1,4 @@
+* text=AUTO
+
+*.xml text
+*.md text diff=MARKDOWN

@@ -1,0 +1,26 @@
+name: Repo
+
+
+on:
+  issues:
+    types: ["opened"]
+
+  schedule:
+    - cron: "0 * * * *"
+
+
+jobs:
+  repo:
+
+    runs-on: ubuntu-24.04
+
+    permissions:
+      issues: write
+
+    steps:
+      # https://github.com/dessant/repo-lockdown
+      - name: Repo lockdown
+        uses: dessant/repo-lockdown@v4.0.0
+        with:
+          issue-comment: "This repository does not accept issues."
+          close-issue: true
